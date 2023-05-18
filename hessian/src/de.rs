@@ -11,7 +11,7 @@ use super::error::{ErrorKind, Result};
 use super::value::{self, Definition, Value};
 
 pub struct Deserializer<R: AsRef<[u8]>> {
-    buffer: Cursor<R>,
+    pub buffer: Cursor<R>,
     type_references: Vec<String>,
     class_references: Vec<Definition>,
 }
